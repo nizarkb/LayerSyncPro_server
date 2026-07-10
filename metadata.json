@@ -1,0 +1,6 @@
+{
+  "name": "Layer SyncPro",
+  "description": "Sistem manajemen operasional, log harian produksi & pakan, jadwal vaksinasi, dan checklist biosekuriti harian peternakan ayam petelur dengan sinkronisasi API Mobile.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

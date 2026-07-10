@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-brand-primary: #2D5B32; /* Forest Green from logo */
+  --color-brand-secondary: #1E3F22; /* Deep Forest Green */
+  --color-brand-light: #F0F5F1; /* Subtle Green-gray tint */
+  --color-brand-accent: #D28833; /* Golden Amber from logo */
+  --color-brand-accent-light: #FAF6EE; /* Creamy beige */
+}
+
+/* Enable manual class-based dark mode in Tailwind v4 */
+@variant dark (&:where(.dark, .dark *));
+
+/* Custom styles for high quality UI */
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc; /* Slate 50 */
+  color: #0f172a; /* Slate 900 */
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-color: #0b0f19; /* Deep Slate dark background */
+  color: #f1f5f9; /* Slate 100 */
+}
+
+/* Global utility classes for perfect dark mode fallback */
+.dark .bg-white {
+  background-color: #111827 !important; /* Gray 900 */
+}
+
+.dark .text-slate-900 {
+  color: #f1f5f9 !important; /* Slate 100 */
+}
+
+.dark .text-slate-850,
+.dark .text-slate-800 {
+  color: #e2e8f0 !important; /* Slate 200 */
+}
+
+.dark .text-slate-700 {
+  color: #cbd5e1 !important; /* Slate 300 */
+}
+
+.dark .text-slate-600 {
+  color: #94a3b8 !important; /* Slate 400 */
+}
+
+.dark .text-slate-500 {
+  color: #94a3b8 !important; /* Slate 400 */
+}
+
+.dark .text-slate-400 {
+  color: #64748b !important; /* Slate 500 */
+}
+
+.dark .border-slate-100,
+.dark .border-slate-200,
+.dark .border-slate-200\/60,
+.dark .border-slate-200\/80 {
+  border-color: #1f2937 !important; /* Gray 800 */
+}
+
+.dark .bg-slate-50 {
+  background-color: #1f2937 !important; /* Gray 800 */
+}
+
+.dark .bg-slate-50\/50 {
+  background-color: rgba(31, 41, 55, 0.5) !important;
+}
+
+.dark .bg-slate-100 {
+  background-color: #374151 !important; /* Gray 700 */
+}
+
+.dark .hover\:bg-slate-50:hover {
+  background-color: #1f2937 !important;
+}
+
+.dark .hover\:bg-slate-100:hover {
+  background-color: #374151 !important;
+}
+
+/* Input elements styling in dark mode */
+.dark input[type="text"],
+.dark input[type="password"],
+.dark input[type="email"],
+.dark input[type="number"],
+.dark input[type="date"],
+.dark select,
+.dark textarea {
+  background-color: #1f2937 !important; /* Gray 800 */
+  color: #f1f5f9 !important;
+  border-color: #374151 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #64748b !important;
+}
+
+.dark select option {
+  background-color: #111827 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Table body rows and stripes */
+.dark .even\:bg-slate-50\/50:nth-child(even) {
+  background-color: rgba(31, 41, 55, 0.4) !important;
+}
+
+.dark .odd\:bg-white:nth-child(odd) {
+  background-color: #111827 !important;
+}
+
+/* Overriding cards and widgets with solid backgrounds */
+.dark .bg-white\/80 {
+  background-color: rgba(17, 24, 39, 0.8) !important;
+}
+
+.dark .bg-white\/90 {
+  background-color: rgba(17, 24, 39, 0.9) !important;
+}
+
+/* Glass effect components */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.dark .glass-panel {
+  background: rgba(17, 24, 39, 0.85) !important; /* Gray 900 Glass */
+  border-color: rgba(31, 41, 55, 0.8) !important;
+}
+
+/* Smooth custom transitions */
+.transition-smooth {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
